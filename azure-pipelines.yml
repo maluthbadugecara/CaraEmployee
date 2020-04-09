@@ -19,3 +19,5 @@ steps:
     configuration: '$(Configuration)'
     cordovaVersion: '9.0.0'
     outputPattern: 'bin'
+   
+
