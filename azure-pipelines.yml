@@ -43,3 +43,7 @@ steps:
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
 # TBD - building for IOS and create IPA.  
+- task: CordovaCommand@1
+  inputs:
+    cordovaCommand: 'build ios'
+    cordovaVersion: '8.1.2'
