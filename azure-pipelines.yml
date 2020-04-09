@@ -36,13 +36,14 @@ steps:
     ionicCommand: 'cordova build android'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
-# ios code goes here, might need XCODE plugin
+# Generate iOS native code
 - task: IonicCommand@1
   inputs:
     ionicCommand: 'cordova platform add ios'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
-# TBD - building for IOS and create IPA.  
+# Build APP for iOS using XCode via Cordova (unsigned). 
+# ipa will be built when it is signed and published into AppStore  
 - task: CordovaCommand@1
   inputs:
     cordovaCommand: 'build ios'
