@@ -15,24 +15,38 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
+# NPM (Node Package manager) to install npm and dependencies
+# This will read the package.json file in the project file structure and find out the dependent plugins
 - task: Npm@1
   inputs:
     command: 'install'
+
+# Ionic commands
+# first we build the source code (Js, html, typescript and angular)
 - task: IonicCommand@1
   inputs:
     ionicCommand: 'build'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
+# Now generate Android native code
 - task: IonicCommand@1
   inputs:
     ionicCommand: 'cordova platform add android'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'    
+# Now build android source and generate APK
+# By default, the APK builds in Debug mode, we have to use --release argument to build it in release mode 
+# That will need the location of the keystore file as well
 - task: IonicCommand@1
   inputs:
     ionicCommand: 'cordova build android'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
-
+# ios code goes here, might need XCODE plugin
+- task: IonicCommand@1
+  inputs:
+    ionicCommand: 'cordova platform add ios'
+    ionicVersion: '5.4.14'
+    cordovaVersion: '8.1.2'    
 
    
