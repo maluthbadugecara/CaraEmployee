@@ -15,17 +15,12 @@ pool:
   vmImage: 'macos-latest'
 
 steps:
+- task: CordovaBuild@1
+  inputs:
+    platform: 'android'
+    configuration: '$(Configuration)'
+    cordovaVersion: '8.1.2'
+    outputPattern: 'bin'
 
-- task: IonicCommand@1
-  inputs:
-    ionicCommand: 'info'
-    ionicVersion: '5.4.14'
-    cordovaVersion: '8.1.2'
-    
-- task: IonicCommand@1
-  inputs:
-    ionicCommand: 'cordova platform add android'
-    ionicVersion: '5.4.14'
-    cordovaVersion: '8.1.2'
 
    
