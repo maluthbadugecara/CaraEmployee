@@ -42,10 +42,4 @@ steps:
     ionicCommand: 'cordova platform add ios'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
-- task: Xcode@5
-  inputs:
-    actions: 'build'
-    xcWorkspacePath: '**/platform/ios/MyApp.xcworkspace'
-    packageApp: true
-
    
