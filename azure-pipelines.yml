@@ -16,5 +16,5 @@ steps:
   inputs:
     platform: 'android'
     configuration: '$(Configuration)'
-    cordovaVersion: '6.0.0'
+    cordovaVersion: '9.0.0'
     outputPattern: 'bin'
