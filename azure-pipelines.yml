@@ -42,4 +42,4 @@ steps:
     ionicCommand: 'cordova platform add ios'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
-   
+# TBD - building for IOS and create IPA.  
