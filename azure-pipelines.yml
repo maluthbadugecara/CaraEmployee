@@ -18,13 +18,13 @@ steps:
 
 - task: IonicCommand@1
   inputs:
-    ionicCommand: 'ionic info'
+    ionicCommand: 'info'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
     
 - task: IonicCommand@1
   inputs:
-    ionicCommand: 'ionic cordova platform add android'
+    ionicCommand: 'cordova platform add android'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
 
