@@ -1,12 +1,6 @@
-# Android
+# Cara Employee App Demo
 
-
-
-
-# Build your Android project with Gradle.
-# Add steps that test, sign, and distribute the APK, save build artifacts, and more:
-# https://docs.microsoft.com/azure/devops/pipelines/languages/android
-
+# Dry run of CI script for Cara Employee App
 
 trigger:
 - master
@@ -33,7 +27,7 @@ steps:
   inputs:
     ionicCommand: 'cordova platform add android'
     ionicVersion: '5.4.14'
-    cordovaVersion: '8.1.2'    
+    cordovaVersion: '8.1.2'
 # Now build android source and generate APK
 # By default, the APK builds in Debug mode, we have to use --release argument to build it in release mode 
 # That will need the location of the keystore file as well
@@ -47,6 +41,11 @@ steps:
   inputs:
     ionicCommand: 'cordova platform add ios'
     ionicVersion: '5.4.14'
-    cordovaVersion: '8.1.2'    
+    cordovaVersion: '8.1.2'
+- task: Xcode@5
+  inputs:
+    actions: 'build'
+    xcWorkspacePath: '**/platform/ios/MyApp.xcworkspace'
+    packageApp: true
 
    
