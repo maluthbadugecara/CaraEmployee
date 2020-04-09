@@ -1,0 +1,8 @@
+{
+  "name": "cara-app",
+  "integrations": {
+    "capacitor": {},
+    "cordova": {}
+  },
+  "type": "angular"
+}
