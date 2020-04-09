@@ -15,11 +15,7 @@ pool:
 
 steps:
 
-- task: IonicCommand@1
-  inputs:
-    ionicCommand: 'cordova platform add android --verbose'
-    ionicVersion: '5.4.14'
-    cordovaVersion: '8.1.2'
+
 - task: CordovaBuild@1
   inputs:
     platform: 'android'
@@ -27,4 +23,3 @@ steps:
     cordovaVersion: '8.1.2'
     outputPattern: 'bin'
    
-
