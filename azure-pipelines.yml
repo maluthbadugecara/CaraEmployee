@@ -2,6 +2,7 @@
 
 
 
+
 # Build your Android project with Gradle.
 # Add steps that test, sign, and distribute the APK, save build artifacts, and more:
 # https://docs.microsoft.com/azure/devops/pipelines/languages/android
@@ -15,11 +16,16 @@ pool:
 
 steps:
 
-
-- task: CordovaBuild@1
+- task: IonicCommand@1
   inputs:
-    platform: 'android'
-    configuration: '$(Configuration)'
+    ionicCommand: 'ionic info'
+    ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
-    outputPattern: 'bin'
+    
+- task: IonicCommand@1
+  inputs:
+    ionicCommand: 'ionic cordova platform add android'
+    ionicVersion: '5.4.14'
+    cordovaVersion: '8.1.2'
+
    
