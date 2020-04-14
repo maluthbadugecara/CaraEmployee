@@ -51,7 +51,7 @@ steps:
 # below section is for copying APK/APP to artifact
 - task: CopyFiles@2
   inputs:
-    contents: '**/*.apk'
+    contents: '**/*'
     targetFolder: '$(build.artifactStagingDirectory)'
 - task: PublishBuildArtifacts@1
   inputs:
