@@ -48,3 +48,7 @@ steps:
   inputs:
     cordovaCommand: 'build ios'
     cordovaVersion: '8.1.2'
+- task: PublishBuildArtifacts@1
+  inputs:
+    PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+    ArtifactName: drop 
