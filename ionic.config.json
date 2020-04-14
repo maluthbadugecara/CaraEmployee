@@ -4,5 +4,5 @@
     "capacitor": {},
     "cordova": {}
   },
-  "type": "ionic-angular"
+  "type": "angular"
 }
