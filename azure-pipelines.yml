@@ -60,7 +60,7 @@ steps:
       
       echo $(Build.SourcesDirectory)
 
-      cp -r $(Build.SourcesDirectory)/platforms/*.* $(build.artifactStagingDirectory)
+      cp -r $(Build.SourcesDirectory)/platforms/  $(build.artifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
