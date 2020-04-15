@@ -53,18 +53,14 @@ steps:
 - task: Bash@3
   inputs:
     targetType: 'inline'
-    script: |
+    script: 
       # Write your commands here
       
       echo $(build.artifactStagingDirectory)
       
       echo $(Build.SourcesDirectory)
 
-      cp -r $(Build.SourcesDirectory)/platforms/*.* $(build.artifactStagingDirectory)/
-- #task: CopyFiles@2
-  #inputs:
-  #  contents: '**/*.apk'
-  #  targetFolder: '$(build.artifactStagingDirectory)'
+      cp -r $(Build.SourcesDirectory)/platforms/*.* $(build.artifactStagingDirectory)
 - task: PublishBuildArtifacts@1
   inputs:
     PathtoPublish: '$(Build.ArtifactStagingDirectory)'
