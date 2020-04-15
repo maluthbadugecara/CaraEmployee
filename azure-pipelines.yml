@@ -49,6 +49,15 @@ steps:
     cordovaCommand: 'build ios'
     cordovaVersion: '8.1.2'
 # below section is for copying APK/APP to artifact
+- task: Bash@3
+  inputs:
+    targetType: 'inline'
+    script: |
+      # Write your commands here
+      
+      echo $(build.artifactStagingDirectory)
+      
+      echo $(Build.SourcesDirectory)
 - task: CopyFiles@2
   inputs:
     contents: '**/*.apk'
