@@ -34,6 +34,7 @@ steps:
 - task: IonicCommand@1
   inputs:
     ionicCommand: 'cordova build android'
+    ionicArgs: '--release'
     ionicVersion: '5.4.14'
     cordovaVersion: '8.1.2'
 # Generate iOS native code
